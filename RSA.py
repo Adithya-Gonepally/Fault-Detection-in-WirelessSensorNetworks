@@ -1,6 +1,6 @@
 
 import random
-from fractions import gcd
+from math import gcd
 
 # TODO: Mathematical proof in a python notebook
 
