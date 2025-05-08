@@ -2,9 +2,10 @@ Flask==2.3.3
 Werkzeug==2.3.7
 pycryptodome==3.20.0
 ecdsa==0.18.0
-numpy==1.26.4
 gunicorn==21.2.0
-pandas==2.2.2
-scikit-learn==1.4.2
+scikit-learn==0.22.2.post1
+numpy==1.18.5
+pandas==1.0.5
+
 
 
