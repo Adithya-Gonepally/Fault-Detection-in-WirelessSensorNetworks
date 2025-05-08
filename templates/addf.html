@@ -1,0 +1,226 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Template Name: Internet Business
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>An intelligent fault detection approach system in wireless sensor network</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="{{url_for('static', filename="layout/styles/layout.css") }}"  type="text/css" />
+<link rel="icon" href="{{url_for('static', filename="img/architecture.jpg") }}" ></link>
+<script type="text/javascript" src="{{url_for('static', filename="layout/scripts/jquery.min.js") }}" ></script>
+<script type="text/javascript" src="{{url_for('static', filename="layout/scripts/jquery.easing.1.3.js") }}" ></script>
+<script type="text/javascript" src="{{url_for('static', filename="layout/scripts/jquery.hslides.1.0.js") }}" ></script>
+<script type="text/javascript">
+$((function () {
+    $('#accordion').hSlides({
+        totalWidth: 920,
+        totalHeight: 300,
+        minPanelWidth: 111,
+        maxPanelWidth: 911,
+		easing: "easeOutBack",
+		activeClass: 'current'
+    });
+}));
+</script>
+</head>
+<body id="top">
+<div id="header">
+  <div class="wrapper">
+    <div class="fl_left">
+     
+    
+    </div>
+      <div class="fl_right"><h1>An intelligent fault detection approach system in wireless sensor network</h1> </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div id="topbar">
+  <div class="wrapper">
+    <div id="topnav">
+      <ul>
+      <li><a href="/ownerhome">Home</a></li>
+        <li><a href="/fileupload">File upload</a></li>
+        <li><a href="/ownerviewfiles">View Files</a></li>
+       <li class="active"><a href="/viewencfiles">View Packetdata</a></li>
+        <li><a href="/vuserreq">View Request</a></li>
+        <li><a href="/logout">logout</a></li>
+      </ul>
+    </div>
+  
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+
+<!-- ####################################################################################################### -->
+
+<!-- ####################################################################################################### -->
+<div id="container">
+  <div class="wrapper">
+    <div id="content">
+      
+      
+     <form name="myform" method="post" action="/addfact">
+
+                 <table align="center">
+              
+
+                <tr>
+                    <td>
+                        <td><strong><font size="5" color="black">File Name:</font></strong></td><td><input type="text"
+                                                                                                           class="uname" name="fname" value="{{fname}}" placeholder= UserName style="height:30px; width:200px" />&nbsp;<span class="status"></span></td>
+                    </td>
+                </tr>
+               
+                       <tr>
+                    <td>
+                        <td><strong><font size="5" color="black">Duration: </font></strong></td>
+                        <td><input type="number" name="dur" id="dob1" placeholder="Length of time duration of the connection (0 - 54451)" style="height:30px; width:200px"></input></td> 
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <td><strong><font size="5" color="black">Protocol Type: </font></strong></td> 
+                        <td><select name="port">
+                            <option disabled="" selected="">Protocol used in the connection</option>
+                    <option id="tcp">1. TCP</option>
+                    <option id="udp">2. UDP</option>
+                    <option id="icmp">3. ICMP</option>
+                        </select></td> 
+                    </td>
+                </tr>
+                
+
+ 
+                 <tr>
+                    <td>
+                        <td><strong><font size="5" color="black">Service:</font></strong></td>
+                        <td><input type="text" name="service" id="city" placeholder="Destination network service used" style="height:30px; width:200px"> </input></td>
+                    </td>
+                </tr>
+                
+
+              
+
+                <tr>
+                    <td>
+                        <td><strong><font size="5" color="black">Flag: </font></strong></td> 
+                        <td><input type="text" name="flag" id="contactno1" placeholder= "Flag Type value type" style="height:30px; width:200px"></input>
+                            </select></td>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <td><strong><font size="5" color="black">Src Bytes: </font></strong></td> 
+                        <td><input type="number" name="srcbytes" id="contactno1" placeholder="Number of data bytes transferred from source to dest" style="height:30px; width:200px"></input>
+                            </select></td>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <td><strong><font size="5" color="black">Dstn Bytes: </font></strong></td> 
+                        <td><input type="number" name="dstnbytes" id="contactno1" placeholder= "Number of data bytes transferred from dest to source" style="height:30px; width:200px"></input>
+                            </select></td>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <td><strong><font size="5" color="black">Logged In: </font></strong></td> 
+                        <td><select name="login_status">
+                            <option disabled="" selected=""><span  style="color:#ccc">Login Status</span></option>
+                    <option id="out">0. Logged out</option>
+                    <option id="in">1. Logged in</option>
+                        </select></td> 
+                    </td>
+                </tr><br>
+
+                <tr>
+                    <td>
+                        <td><strong><font size="5" color="black">Wrong Fragment: </font></strong></td> 
+                        <td> <select class="form-control" id="wrong" required="" name="wrong">
+                            <option disabled="" selected="">Total number of wrong fragments in this connection</option>
+                            <option id="wrng0">0</option>
+                            <option id="wrng1">1</option>
+                            <option id="wrng2">2</option>
+                            <option id="wrng3">3</option>
+                          </select></td> 
+                    </td>
+                </tr>
+
+
+
+                <tr>
+                    <td>
+                        <td><strong><font size="5" color="black">Same Destn Count: </font></strong></td> 
+                        <td><input type="number" min="0" max="511" name="sdc" id="contactno1" placeholder= "Same Destn Count" style="height:30px; width:200px"></input>
+                            </select></td>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <td><strong><font size="5" color="black">Same Port Count: </font></strong></td> 
+                        <td><input type="number" min="0" max="511" name="srv_count" id="contactno1" placeholder= "Same Port Count" style="height:30px; width:200px"></input>
+                            </select></td>
+                    </td>
+                </tr>
+
+
+              
+                <tr>
+                    <td>
+                        <center>        <td><input type="submit" value="Submit" style="height:50px; width:90px" /></td>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+                            <td> <input type="reset" value="Reset" style="height:50px; width:90px" /></td>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+                    </td>
+                </tr>
+
+
+
+
+
+            </table>
+        </form>
+
+      
+    </div>
+    <div id="column">
+      <div class="holder">
+        <h2>Know More..!</h2>
+        <ul id="latestnews">
+          <li> <img class="imgl" src="{{url_for('static', filename="img/cloud.jpg") }}"  alt="" />
+            <p>The encryption key is exposed and only the viable
+means to guarantee confidentiality is to limit the adversary
+access to the ciphertext.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+
+<!-- ####################################################################################################### -->
+<div id="copyright">
+  <div class="wrapper">
+    
+     <p class="lf">Developed by <a href=" "> </a></p> <br class="clear" />
+  </div>
+</div>
+</body>
+</html>
