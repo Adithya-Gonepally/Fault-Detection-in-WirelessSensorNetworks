@@ -4,3 +4,6 @@ pycryptodome==3.20.0
 ecdsa==0.18.0
 numpy==1.26.4
 gunicorn==21.2.0
+pandas==2.2.2
+
+
